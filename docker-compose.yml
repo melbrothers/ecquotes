@@ -25,7 +25,7 @@ services:
             MYSQL_PASSWORD: secret
             MYSQL_ROOT_PASSWORD: secret
         ports:
-            - 33061:3306
+            - 3306:3306
         volumes:
             - mysqldata:/var/lib/mysql
         networks:
