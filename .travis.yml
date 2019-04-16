@@ -14,6 +14,7 @@ addons:
             - docker-ce
 
 before_install:
+    - /etc/init.d/mysql stop
     - cp .env.travis .env
     - docker-compose build
     - docker-compose up -d
