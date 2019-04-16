@@ -1,0 +1,29 @@
+language: node_js
+
+node_js:
+    - "10"
+
+sudo: required
+
+services:
+    - docker
+
+addons:
+    apt:
+        packages:
+            - docker-ce
+
+before_install:
+    - cp .env.travis .env
+    - docker-compose build
+    - docker-compose up -d
+
+install:
+    - docker exec -it ecquotes.local composer install --no-interaction
+    - npm install
+
+script:
+    - docker exec -it ecquotes.local vendor/bin/phpunit
+
+notifications:
+    email: false

@@ -1,0 +1,48 @@
+version: '3'
+services:
+    web:
+        build:
+            context: ./docker
+        container_name: ecquotes.local
+        ports:
+            - 80:80
+        links:
+            - mysql
+        volumes:
+            - .:/var/www
+            - ~/.ssh/:/root/.ssh/
+            - ./docker/php.ini:/usr/local/etc/php/conf.d/php.ini
+        environment:
+            DB_HOST: mysql
+        networks:
+            - app-network
+
+    mysql:
+        image: mysql:5.7
+        environment:
+            MYSQL_DATABASE: ecquotes
+            MYSQL_USER: root
+            MYSQL_PASSWORD: secret
+            MYSQL_ROOT_PASSWORD: secret
+        ports:
+            - 33061:3306
+        volumes:
+            - mysqldata:/var/lib/mysql
+        networks:
+            - app-network
+
+    redis:
+        image: redis
+        ports:
+            - 6379:6379
+        volumes:
+            - redisdata:/data
+        networks:
+            - app-network
+
+volumes:
+    mysqldata:
+    redisdata:
+networks:
+    app-network:
+        driver: "bridge"
