@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('{path}', 'SpaController@index')->where('path', '(.*)');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('password/reset/{token}', 'SpaController@index')->name('password.reset');
