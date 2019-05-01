@@ -19,19 +19,23 @@
               {{ title }}
             </div>
             <div class="body-2 my-3">
-              <a href="https://laravel.com/docs">Documentation</a>
-              <a href="https://laracasts.com">Laracasts</a>
-              <a href="https://laravel-news.com">News</a>
-              <a href="https://forge.laravel.com">Forge</a>
-              <a href="https://github.com/laravel/laravel">GitHub</a>
+             <div id="header-wrapper">
+              <div id="header" class="container">
+                <div id="logo">
+                  <span class="icon icon-group"></span>
+                  <h1><a href="#">Bid and quotes</a></h1>
+                </div>
+                <div id="triangle-up"></div>
+              </div>
             </div>
-            <img src="/img/v.png" alt="Vuetify.js" class="mt-5">
+            </div>
+            <!-- <img src="/img/v.png" alt="Vuetify.js" class="mt-5"> -->
             <div class="display-2 grey--text mt-5">
-              Vuetify
+              The description of Bid1
             </div>
             <div class="body-2 my-3">
-              <a href="https://vuetifyjs.com">Documentation</a>
-              <a href="https://github.com/vuetifyjs/vuetify">GitHub</a>
+              <!-- <a href="https://vuetifyjs.com">Documentation</a>
+              <a href="https://github.com/vuetifyjs/vuetify">GitHub</a> -->
             </div>
           </v-layout>
         </v-container>
