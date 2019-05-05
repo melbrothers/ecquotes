@@ -71,6 +71,7 @@
 
 <script>
 import Form from 'vform'
+import { validateMixin } from '~/plugins/validation';
 
 export default {
   name: 'register-view',
@@ -89,7 +90,7 @@ export default {
       eye: true
     }
   },
-
+  mixins: [validateMixin],
   methods: {
     async register () {
       if (await this.formHasErrors()) return
