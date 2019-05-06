@@ -704,7 +704,6 @@ export default {
 }
 </script>
 <style lang="scss">
-  @import url('../../css/argon.css');
   .section-shaped .shape {
     z-index: 0;
   }
