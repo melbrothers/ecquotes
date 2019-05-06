@@ -15,7 +15,7 @@ mix.js('resources/js/app.js', 'public/js')
     .css('resources/css/argon.css', 'public/css')
     .sass('resources/sass/app.scss', 'public/css')
     .stylus('resources/stylus/app.styl', 'public/css')
-    // .copyDirectory('resources/images', 'public/images')
+    .copyDirectory('resources/images', 'public/images')
     .copyDirectory('resources/icons', 'public/icons')
     .disableNotifications()
     .sourceMaps();

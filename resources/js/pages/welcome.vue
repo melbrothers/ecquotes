@@ -4,7 +4,7 @@
     <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
       <div class="container">
         <a class="navbar-brand mr-lg-5" href="../index.html">
-          <img src="../../images/theme/white.png">
+          <img src="/images/theme/white.png">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@
             <div class="row">
               <div class="col-6 collapse-brand">
                 <a href="../index.html">
-                  <img src="../../images/theme/blue.png">
+                  <img src="/images/theme/blue.png">
                 </a>
               </div>
               <div class="col-6 collapse-close">
@@ -225,7 +225,7 @@
       <div class="container">
         <div class="row row-grid align-items-center">
           <div class="col-md-6 order-md-2">
-            <img src="../../images/theme/promo-1.png" class="img-fluid floating">
+            <img src="/images/theme/promo-1.png" class="img-fluid floating">
           </div>
           <div class="col-md-6 order-md-1">
             <div class="pr-md-5">
@@ -282,7 +282,7 @@
         <div class="row row-grid align-items-center">
           <div class="col-md-6">
             <div class="card bg-default shadow border-0">
-              <img src="../../images/theme/img-1-1200x1000.jpg" class="card-img-top">
+              <img src="/images/theme/img-1-1200x1000.jpg" class="card-img-top">
               <blockquote class="card-blockquote">
                 <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" class="svg-bg">
                   <polygon points="0,52 583,95 0,95" class="fill-default" />
@@ -313,7 +313,7 @@
         <div class="row row-grid align-items-center">
           <div class="col-md-6 order-lg-2 ml-lg-auto">
             <div class="position-relative pl-md-5">
-              <img src="../../icons/ill-2.svg" class="img-center img-fluid">
+              <img src="/icons/ill-2.svg" class="img-center img-fluid">
             </div>
           </div>
           <div class="col-lg-6 order-lg-1">
@@ -381,7 +381,7 @@
         <div class="row">
           <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="px-4">
-              <img src="../../images/theme/team-1-800x800.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <img src="/images/theme/team-1-800x800.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
               <div class="pt-4 text-center">
                 <h5 class="title">
                   <span class="d-block mb-1">Ryan Tompson</span>
@@ -403,7 +403,7 @@
           </div>
           <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="px-4">
-              <img src="../../images/theme/team-2-800x800.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <img src="/images/theme/team-2-800x800.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
               <div class="pt-4 text-center">
                 <h5 class="title">
                   <span class="d-block mb-1">Romina Hadid</span>
@@ -425,7 +425,7 @@
           </div>
           <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="px-4">
-              <img src="../../images/theme/team-3-800x800.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <img src="/images/theme/team-3-800x800.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
               <div class="pt-4 text-center">
                 <h5 class="title">
                   <span class="d-block mb-1">Alexander Smith</span>
@@ -447,7 +447,7 @@
           </div>
           <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="px-4">
-              <img src="../../images/theme/team-4-800x800.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <img src="/images/theme/team-4-800x800.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
               <div class="pt-4 text-center">
                 <h5 class="title">
                   <span class="d-block mb-1">John Doe</span>
@@ -619,14 +619,14 @@
         <div class="col-md-6 mb-5 mb-md-0">
           <div class="card card-lift--hover shadow border-0">
             <a href="../examples/landing.html" title="Landing Page">
-              <img src="../../images/theme/landing.jpg" class="card-img">
+              <img src="/images/theme/landing.jpg" class="card-img">
             </a>
           </div>
         </div>
         <div class="col-md-6 mb-5 mb-lg-0">
           <div class="card card-lift--hover shadow border-0">
             <a href="../examples/profile.html" title="Profile Page">
-              <img src="../../images/theme/profile.jpg" class="card-img">
+              <img src="/images/theme/profile.jpg" class="card-img">
             </a>
           </div>
         </div>
