@@ -12,41 +12,52 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+<<<<<<< HEAD
    .sass('resources/sass/app.scss', 'public/css')
    .stylus('resources/stylus/app.styl', 'public/css')
    .disableNotifications()
    .copyDirectory('resources/img', 'public/img')
    .sourceMaps()
  
+=======
+    .css('resources/css/argon.css', 'public/css')
+    .sass('resources/sass/app.scss', 'public/css')
+    .stylus('resources/stylus/app.styl', 'public/css')
+    .copyDirectory('resources/images', 'public/images')
+    .copyDirectory('resources/icons', 'public/icons')
+    .disableNotifications()
+    .sourceMaps();
+
+>>>>>>> 4409226f709c753fb53ff0497d312f94c5c955be
 
 if (mix.inProduction()) {
-   mix.version()
- 
-   mix.extract([
-     'vue',
-     'vform',
-     'axios',
-     'vuex',
-     'vue-i18n',
-     'vue-meta',
-     'js-cookie',
-     'vue-router',
-     'vuetify',
-     'vee-validate',
-     'vuex-router-sync'
-   ])
- } else {
-   mix.webpackConfig({
-     devtool: 'inline-source-map'
-   })
- }
+    mix.version();
+
+    mix.extract([
+        'vue',
+        'vform',
+        'axios',
+        'vuex',
+        'vue-i18n',
+        'vue-meta',
+        'js-cookie',
+        'vue-router',
+        'vuetify',
+        'vee-validate',
+        'vuex-router-sync'
+    ])
+} else {
+    mix.webpackConfig({
+        devtool: 'inline-source-map'
+    })
+}
 
 mix.webpackConfig({
-   plugins: [
-   ],
-   resolve: {
-      alias: {
-         '~': path.join(__dirname, './resources/js')
-      }
-   }
-})
+    plugins: [],
+    resolve: {
+        alias: {
+            '~': path.join(__dirname, './resources/js')
+        }
+    }
+});
+

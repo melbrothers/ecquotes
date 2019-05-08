@@ -9,4 +9,10 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+<<<<<<< HEAD
 .history
+=======
+.history/
+.idea/
+.DS_Store
+>>>>>>> 4409226f709c753fb53ff0497d312f94c5c955be
