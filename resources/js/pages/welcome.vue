@@ -69,10 +69,8 @@
                 <span class="nav-link-inner--text">Examples</span>
               </a>
               <div class="dropdown-menu">
-                <a href="../examples/landing.html" class="dropdown-item">Landing</a>
-                <a href="../examples/profile.html" class="dropdown-item">Profile</a>
-                <a href="../examples/login.html" class="dropdown-item">Login</a>
-                <a href="../examples/register.html" class="dropdown-item">Register</a>
+                <router-link to="/login" class="dropdown-item">Login</router-link>
+                <router-link to="/register" class="dropdown-item">Register</router-link>
               </div>
             </li>
           </ul>
@@ -102,12 +100,12 @@
               </a>
             </li>
             <li class="nav-item d-none d-lg-block ml-lg-4">
-              <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank" class="btn btn-neutral btn-icon">
+              <button class="btn btn-neutral btn-icon">
                 <span class="btn-inner--icon">
                   <i class="fa fa-cloud-download mr-2"></i>
                 </span>
-                <span class="nav-link-inner--text">Download</span>
-              </a>
+                <router-link to="/login" class="nav-link-inner--text">Login</router-link>
+              </button>
             </li>
           </ul>
         </div>
