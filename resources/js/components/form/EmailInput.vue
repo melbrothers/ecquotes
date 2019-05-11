@@ -16,11 +16,12 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import TextInput from './TextInput'
+import Component from 'vue-class-component'
 
-export default {
-  extends: TextInput,
-  name: 'email-input'
+@Component({})
+export default class EmailInput extends TextInput{
+  name = 'email-input'
 }
 </script>
