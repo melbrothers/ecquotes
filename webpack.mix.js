@@ -24,7 +24,6 @@ if (mix.inProduction()) {
  
    mix.extract([
      'vue',
-     'vform',
      'axios',
      'vuex',
      'vue-i18n',

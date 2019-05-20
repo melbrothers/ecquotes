@@ -5,7 +5,6 @@ import EmailInput from './form/EmailInput.vue'
 // import PasswordInput from './form/PasswordInput.vue'
 // import SubmitButton from './form/SubmitButton.vue'
 // import TextInput from './form/TextInput.vue'
-// import { HasError, AlertError, AlertSuccess } from 'vform'
 //
 //
 // Vue.component(Icon.name, Icon);

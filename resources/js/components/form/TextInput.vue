@@ -11,7 +11,6 @@
             :prepend-icon="prepend"
             v-model="_value"
         ></v-text-field>
-        <has-error :form="form" :field="name"></has-error>
     </div>
 </template>
 
@@ -54,7 +53,7 @@
         @Prop({default: ''}) prepend!: string;
         @Prop(String) name!: string;
         @Prop(String) label!: string;
-        
+
         get errorMessages () {
             return this.vErrors.collect(this.name)
         }

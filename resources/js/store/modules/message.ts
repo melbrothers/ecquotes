@@ -1,7 +1,9 @@
 import * as types from '../mutation-types'
+import { MessageState } from '../types'
+import { GetterTree, MutationTree, ActionTree } from 'vuex'
 
 // state
-export const state = {
+export const state: MessageState = {
   type: '',
   title: '',
   text: '',
@@ -10,37 +12,36 @@ export const state = {
 };
 
 // mutations
-export const mutations = {
-  [types.RESPONSE_MSG] (state: any, payload: any) {
+export const mutations: MutationTree<MessageState> = {
+  [types.RESPONSE_MSG] (state, payload) {
     Object.assign(state, { ...payload, show: true })
   },
-  [types.CLEAR_MSG] (state: any) {
+  [types.CLEAR_MSG] (state) {
     Object.assign(state, { type: '', text: '', title: '', modal: false, show: false })
   }
 }
 
 // actions
-export const actions = {
-  responseMessage ({ commit, state }: any, payload: any) {
+export const actions: ActionTree<MessageState, any> = {
+  responseMessage ({ commit, state }, payload) {
     commit(types.RESPONSE_MSG, payload);
     if (!state.modal) {
       setTimeout(() => { commit(types.CLEAR_MSG) }, 6500)
     }
   },
-  clearMessage ({ commit }: any) {
+  clearMessage ({ commit }) {
     commit(types.CLEAR_MSG)
   }
 }
 
 // getters
-export const getters = {
-  responseMessage: (state: any) => {
+export const getters: GetterTree<MessageState, any> = {
+  responseMessage: state => {
     return { ...state }
   }
 };
 
 export default {
-    namespaced: true,
     state,
     getters,
     actions,

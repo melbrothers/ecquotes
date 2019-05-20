@@ -1,17 +1,12 @@
-export interface State {
-    auth: Auth,
-    message: Message
+export interface MessageState {
+    type: string,
+    title: string,
+    text: string,
+    modal: boolean,
+    show: boolean
 }
 
-export interface Auth {
+export interface AuthState {
     user: any,
-    token: any
-}
-
-export interface Message {
-    type: '',
-    title: '',
-    text: '',
-    modal: false,
-    show: false
+    token: string | undefined
 }
