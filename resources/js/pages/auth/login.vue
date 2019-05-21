@@ -57,7 +57,6 @@
 </template>
 
 <script>
-import Form from 'vform'
 import { validateMixin } from '~/plugins/validation';
 
 export default {

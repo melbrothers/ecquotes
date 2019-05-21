@@ -12,15 +12,14 @@
       type="email"
       v-model="_value"
     ></v-text-field>
-    <has-error :form="form" :field="name"></has-error> 
   </div>
 </template>
 
-<script>
-import TextInput from './TextInput'
+<script lang="ts">
 
-export default {
-  extends: TextInput,
-  name: 'email-input'
+import { Component, Vue, Prop } from 'vue-property-decorator';
+
+export default class EmailInput extends Vue{
+  name = 'email-input'
 }
 </script>
