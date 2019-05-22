@@ -19,8 +19,9 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { Component, Vue, Prop } from 'vue-property-decorator';
 
-export default {
+export default  {
   name: 'feedback-message',
   computed: mapGetters([
     'responseMessage'

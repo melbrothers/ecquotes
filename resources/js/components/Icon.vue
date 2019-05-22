@@ -4,12 +4,13 @@
   </svg>
 </template>
 
-<script>
+<script lang="ts">
 const files = require.context('!svg-sprite-loader!./../../icons', false, /.*\.svg$/)
 
 files.keys().forEach(files)
-
-export default {
+import Vue from "vue"
+import Component from "vue-class-component"
+export default class Icon extends Vue {
   name: 'svg-icon',
 
   props: {
