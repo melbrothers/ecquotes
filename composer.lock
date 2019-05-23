@@ -897,7 +897,6 @@
                 "laravel"
             ],
             "time": "2019-05-07T14:37:11+00:00"
-<<<<<<< HEAD
         },
         {
             "name": "laravel/passport",
@@ -968,8 +967,6 @@
                 "passport"
             ],
             "time": "2019-03-13T14:21:06+00:00"
-=======
->>>>>>> dce4b9efba10320dc11faa7d4ae92aaf00d85e83
         },
         {
             "name": "laravel/tinker",
