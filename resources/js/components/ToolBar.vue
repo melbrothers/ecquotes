@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar fixed app dark clipped-left color="#748C5D">
+  <v-toolbar fixed app dark clipped-left>
     <v-toolbar-side-icon @click.stop="toggleDrawer" v-if="authenticated"></v-toolbar-side-icon>
     <v-toolbar-title>
       <router-link :to="{ name: 'welcome' }" class="white--text">
