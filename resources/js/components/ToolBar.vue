@@ -27,9 +27,6 @@
 
     <!-- Guest -->
     <template v-else>
-      <v-btn flat :to="{ name: 'products' }">{{ $t('Products') }}</v-btn>
-      <v-btn flat :to="{ name: 'wholesalers' }">{{ $t('Wholesalers') }}</v-btn>
-      <v-btn flat :to="{ name: 'services' }">{{ $t('Services') }}</v-btn>
       <v-btn flat :to="{ name: 'about' }">{{ $t('About') }}</v-btn>
       <v-btn flat :to="{ name: 'terms' }">{{ $t('Terms') }}</v-btn>
       <v-btn flat :to="{ name: 'login' }">{{ $t('login') }}</v-btn>
