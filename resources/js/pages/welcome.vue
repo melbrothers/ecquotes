@@ -93,75 +93,86 @@
           </v-layout>
 
           <h1 class="ma-2 display-3">We differ from other services</h1>  
-          <v-layout>
-            <v-flex md6 align-self-start class="mx-2">
-              <v-card class="py-3 px-2 d-flex">
-                <v-layout>
+          <v-layout xs12>
+            <v-flex md6 xs12 align-self-start class="ma-2">
+              <v-card class="d-flex">
+                <v-layout xs12>
                   <v-flex xs7 class="intro-box-small">
                     <h1>Free service with max features</h1>
                     <p>We offer a completely free service with maximum features for all electricians who want a better way to fulfil their orders.</p>
                   </v-flex>
-                  <v-flex xs5 class="intro-box-small">
-                    <img src="../../images/freeServ.jpg" alt="free service" width="250"/>
+                  <v-flex xs5>
+                    <img src="../../images/freeServ.jpg" alt="free service" class="responsive-img"/>
                   </v-flex>
                 </v-layout>
               </v-card>
             </v-flex>
-            <v-flex md6 align-self-start class="mx-2">
-               <v-card class="py-3 px-2 d-flex">
-                <v-layout>
-                  <v-flex xs7 class="intro-box-small">
+            <v-flex md6 xs12 align-self-start class="ma-2">
+               <v-card class="d-flex">
+                <v-layout xs12>
+                  <v-flex md7 xs12 class="intro-box-small">
                     <h1>Supplier Verification</h1>
                     <p>We do all the supplier verification so you don't have to worry about things going wrong.</p>
                   </v-flex>
-                  <v-flex xs5 class="intro-box-small">
-                    <img src="../../images/freeServ.jpg" alt="free service" width="250"/>
+                  <v-flex md5 hidden-xs-only>
+                    <img src="../../images/SupplierVerif.jpg" alt="free service" class="responsive-img" />
                   </v-flex>
                 </v-layout>
               </v-card>
             </v-flex>
           </v-layout>
-          <v-layout>
-             <v-flex md6 align-self-start class="mx-2">
-               <v-card class="py-3 px-2 d-flex">
-                <v-layout>
-                  <v-flex xs7 class="intro-box-small">
+          <v-layout xs12>
+             <v-flex md6 xs12 align-self-start class="ma-2">
+               <v-card class="d-flex">
+                <v-layout xs12>
+                  <v-flex md7 class="intro-box-small">
                     <h1>Best deals</h1>
                     <p>We offer you the best deals through our business model, giving you the best deals available on the market.</p>
                   </v-flex>
-                  <v-flex xs5 class="intro-box-small">
-                    <img src="../../images/freeServ.jpg" alt="free service" width="250"/>
+                  <v-flex md5 hidden-xs-only>
+                    <img src="../../images/bestDeals.jpg" alt="free service" class="responsive-img"/>
                   </v-flex>
                 </v-layout>
               </v-card>
-            </v-flex>
-             <v-flex md6 align-self-start class="mx-2">
-               <v-card class="py-3 px-2 d-flex">
-                <v-layout>
-                  <v-flex xs7 class="intro-box-small">
+             </v-flex>
+             <v-flex md6 xs12 align-self-start class="ma-2">
+               <v-card class="d-flex">
+                <v-layout xs12>
+                  <v-flex md7 xs12 class="intro-box-small">
                     <h1>One account</h1>
                     <p>Make one account to access credit with all the suppliers.</p>
                   </v-flex>
-                  <v-flex xs5 class="intro-box-small">
-                    <img src="../../images/freeServ.jpg" alt="free service" width="250"/>
+                  <v-flex md5 hidden-xs-only>
+                    <img src="../../images/OneAccount.png" alt="free service" class="responsive-img"/>
                   </v-flex>
                 </v-layout>
               </v-card>
             </v-flex>
           </v-layout>
-          <v-layout>
-            <v-flex md6 align-self-start class="mx-2">
-               <v-card class="py-3 px-2 d-flex">
-                <v-layout>
-                  <v-flex xs7 class="intro-box-small">
+          <v-layout xs12 row wrap>
+            <v-flex md6 xs12 align-self-start class="ma-2">
+               <v-card class="d-flex">
+                <v-layout xs12>
+                  <v-flex md7 xs12 class="intro-box-small">
                     <h1>Scoring system</h1>
                     <p>We implement a scoring system that determines how much credit you will have access to and the potential for a bigger discount with your order.</p>
                   </v-flex>
-                  <v-flex xs5 class="intro-box-small">
-                    <img src="../../images/freeServ.jpg" alt="free service" width="250"/>
+                  <v-flex md5>
+                    <img src="../../images/scoringSys.jpg" alt="free service" class="responsive-img"/>
                   </v-flex>
                 </v-layout>
               </v-card>
+            </v-flex>
+            <!-- <v-flex md6 xs12 align-self-start class="ma-2"></v-flex> -->
+          </v-layout>
+          <v-layout xs12>
+            <v-flex row class="bottom-box" md7 xs12>
+                <h1>Be a part of the <span>future</span> </h1>
+                <p>Sign up today to access the biggest range of eletrical wholesalers and products within Australia.</p>
+                <v-btn class="signup-btn mt-4">Sign up</v-btn>
+            </v-flex>
+            <v-flex class="bottom-img" md5 hidden-xs-only>
+              <img src="../../images/bottomImg.jpg" alt="bottom image" class="responsive-img" />
             </v-flex>
           </v-layout>
         </v-container>
@@ -309,4 +320,30 @@ export default {
   .box-1 {
     color: #fff;
   }
+  .responsive-img {
+    width: 100%;
+    height: 100%;
+  }
+ .intro-box-img {
+    background: url('../../images/freeServ.jpg') left top no-repeat;
+  }
+  .intro-box-small {
+    padding: 10px 15px;
+  }
+  .bottom-box {
+    background: var(--v-primary-base);
+    color: white;
+    padding: 15px 30px;
+    min-height: 300px;
+    h1 {
+       font-size: 4vw;
+       span {
+         color: rgb(20, 71, 107);
+       }
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  
 </style>
