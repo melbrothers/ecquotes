@@ -23,7 +23,7 @@
             </v-flex>
             <v-flex md4 align-self-center hidden-xs-only>
                <div class="intro-img">
-                <img src="/images/builder1.jpg" alt="image">
+                <v-img src="/images/builder1.jpg" alt="image"></v-img>
                 <v-btn color="primary">Find out more</v-btn>
               </div>
             </v-flex>
@@ -43,7 +43,7 @@
               </div>
             </v-flex>
             <v-flex md4 hidden-xs-only align-self-center>
-                <img src="/images/comEl.png" alt="compare image" />
+                <v-img src="/images/comEl.png" alt="compare image" ></v-img>
             </v-flex>
           </v-layout>
           <v-layout row class="intro-box bg-color-3 ma-4">
@@ -54,7 +54,7 @@
               </div>
             </v-flex>
             <v-flex md4 hidden-xs-only align-self-center>
-              <img src="../../images/pig.png" alt="pig" />
+              <v-img src="/images/pig.png" alt="pig"></v-img>
             </v-flex>
 
           </v-layout>
@@ -66,7 +66,7 @@
               </div>
             </v-flex>
             <v-flex md4 hidden-xs-only align-self-center>
-              <img src="../../images/bid.png" alt="bid image" width="400"/>
+              <v-img src="/images/bid.png" alt="bid image"></v-img>
             </v-flex>
           </v-layout>
           <v-layout row justify-center class="intro-box bg-color-5 ma-4">
@@ -77,7 +77,7 @@
               </div>
             </v-flex>
             <v-flex md4 hidden-xs-only align-self-center>
-              <img src="../../images/orderMGM.png" alt="order image" width="400"/>
+              <v-img src="/images/orderMGM.png" alt="order image"></v-img>
             </v-flex>
           </v-layout>
           <v-layout row justify-center class="intro-box bg-color-6 ma-4">
@@ -88,7 +88,7 @@
               </div>
             </v-flex>
             <v-flex md4 hidden-xs-only align-self-center>
-              <img src="../../images/EmpInte.png" alt="Employee Integration image">
+              <v-img src="/images/EmpInte.png"></v-img>
             </v-flex>
           </v-layout>
 
@@ -102,7 +102,7 @@
                     <p>We offer a completely free service with maximum features for all electricians who want a better way to fulfil their orders.</p>
                   </v-flex>
                   <v-flex xs5>
-                    <img src="../../images/freeServ.jpg" alt="free service" class="responsive-img"/>
+                    <v-img src="/images/freeServ.jpg" alt="free service"></v-img>
                   </v-flex>
                 </v-layout>
               </v-card>
@@ -115,7 +115,7 @@
                     <p>We do all the supplier verification so you don't have to worry about things going wrong.</p>
                   </v-flex>
                   <v-flex md5 hidden-xs-only>
-                    <img src="../../images/SupplierVerif.jpg" alt="free service" class="responsive-img" />
+                    <v-img src="/images/SupplierVerif.jpg" alt="Supplier Verification"></v-img>
                   </v-flex>
                 </v-layout>
               </v-card>
@@ -130,7 +130,7 @@
                     <p>We offer you the best deals through our business model, giving you the best deals available on the market.</p>
                   </v-flex>
                   <v-flex md5 hidden-xs-only>
-                    <img src="../../images/bestDeals.jpg" alt="free service" class="responsive-img"/>
+                    <v-img src="/images/bestDeals.jpg" alt="Best deals" ></v-img>
                   </v-flex>
                 </v-layout>
               </v-card>
@@ -143,7 +143,7 @@
                     <p>Make one account to access credit with all the suppliers.</p>
                   </v-flex>
                   <v-flex md5 hidden-xs-only>
-                    <img src="../../images/OneAccount.png" alt="free service" class="responsive-img"/>
+                    <v-img src="/images/OneAccount.png" alt="One account"></v-img>
                   </v-flex>
                 </v-layout>
               </v-card>
@@ -158,12 +158,11 @@
                     <p>We implement a scoring system that determines how much credit you will have access to and the potential for a bigger discount with your order.</p>
                   </v-flex>
                   <v-flex md5>
-                    <img src="../../images/scoringSys.jpg" alt="free service" class="responsive-img"/>
+                    <v-img src="/images/scoringSys.jpg" alt="Scoring System" ></v-img>
                   </v-flex>
                 </v-layout>
               </v-card>
             </v-flex>
-            <!-- <v-flex md6 xs12 align-self-start class="ma-2"></v-flex> -->
           </v-layout>
           <v-layout xs12>
             <v-flex row class="bottom-box" md7 xs12>
@@ -172,7 +171,7 @@
                 <v-btn class="signup-btn mt-4">Sign up</v-btn>
             </v-flex>
             <v-flex class="bottom-img" md5 hidden-xs-only>
-              <img src="../../images/bottomImg.jpg" alt="bottom image" class="responsive-img" />
+              <v-img src="/images/bottomImg.jpg" alt="bottom image" ></v-img>
             </v-flex>
           </v-layout>
         </v-container>
