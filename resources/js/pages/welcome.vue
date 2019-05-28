@@ -333,7 +333,6 @@ export default {
     background: var(--v-primary-base);
     color: white;
     padding: 15px 30px;
-    min-height: 300px;
     h1 {
        font-size: 4vw;
        span {
