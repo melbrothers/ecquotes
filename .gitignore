@@ -11,3 +11,6 @@ npm-debug.log
 yarn-error.log
 .idea
 .history
+/public/js
+/public/vendor/l5-swagger
+/resources/views/vendor/l5-swagger
