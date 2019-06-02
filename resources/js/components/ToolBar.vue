@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar fixed app dark clipped-left>
+  <v-toolbar fixed app dark clipped-left color="#14476B">
     <v-toolbar-side-icon @click.stop="toggleDrawer" v-if="authenticated"></v-toolbar-side-icon>
     <v-toolbar-title>
       <router-link :to="{ name: 'welcome' }" class="white--text">
@@ -27,10 +27,12 @@
 
     <!-- Guest -->
     <template v-else>
+      <v-btn flat :to="{ name: 'about' }">{{ $t('About') }}</v-btn>
+      <v-btn flat :to="{ name: 'terms' }">{{ $t('Terms') }}</v-btn>
       <v-btn flat :to="{ name: 'login' }">{{ $t('login') }}</v-btn>
-      <v-btn flat :to="{ name: 'register' }">{{ $t('register') }}</v-btn>
     </template>
   </v-toolbar>
+  
 </template>
 
 <script>
