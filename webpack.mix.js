@@ -15,13 +15,13 @@ mix.ts('resources/js/app.ts', 'public/js')
    .sass('resources/sass/app.scss', 'public/css')
    .stylus('resources/stylus/app.styl', 'public/css')
    .disableNotifications()
-   .copyDirectory('resources/img', 'public/img')
+   .copyDirectory('resources/images', 'public/images')
    .sourceMaps()
- 
+
 
 if (mix.inProduction()) {
    mix.version()
- 
+
    mix.extract([
      'vue',
      'axios',
