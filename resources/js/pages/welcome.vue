@@ -122,10 +122,10 @@
             </v-flex>
           </v-layout>
           <v-layout row wrap>
-             <v-flex md6 xs12 d-flex class="ma-2">
+             <v-flex md6 xs12 sm6 d-flex class="my-1">
                <v-card class="d-flex">
                 <v-layout row wrap>
-                  <v-flex md7 class="intro-box-small">
+                  <v-flex md7 xs12 class="intro-box-small">
                     <h1>Best deals</h1>
                     <p>We offer you the best deals through our business model, giving you the best deals available on the market.</p>
                   </v-flex>
@@ -135,7 +135,7 @@
                 </v-layout>
               </v-card>
              </v-flex>
-             <v-flex md6 xs12 d-flex class="ma-2">
+             <v-flex md6 xs12 d-flex class="my-1">
                <v-card class="d-flex">
                 <v-layout row wrap>
                   <v-flex md7 xs12 class="intro-box-small">
@@ -150,7 +150,7 @@
             </v-flex>
           </v-layout>
           <v-layout row wrap>
-            <v-flex md6 xs12 d-flex class="ma-2">
+            <v-flex md6 xs12 d-flex class="my-1">
                <v-card class="d-flex">
                 <v-layout row wrap>
                   <v-flex md7 xs12 class="intro-box-small">
