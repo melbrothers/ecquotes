@@ -93,23 +93,23 @@
           </v-layout>
 
           <h1 class="ma-2 display-3">We differ from other services</h1>  
-          <v-layout xs12>
-            <v-flex md6 xs12 align-self-start class="ma-2">
+          <v-layout row wrap>
+            <v-flex md6 xs12 sm6 d-flex class="my-1">
               <v-card class="d-flex">
-                <v-layout xs12>
-                  <v-flex xs7 class="intro-box-small">
+                <v-layout row wrap>
+                  <v-flex md7 class="intro-box-small">
                     <h1>Free service with max features</h1>
                     <p>We offer a completely free service with maximum features for all electricians who want a better way to fulfil their orders.</p>
                   </v-flex>
-                  <v-flex xs5>
+                  <v-flex md5 hidden-xs-only>
                     <v-img src="/images/freeServ.jpg" alt="free service"></v-img>
                   </v-flex>
                 </v-layout>
               </v-card>
             </v-flex>
-            <v-flex md6 xs12 align-self-start class="ma-2">
+            <v-flex md6 xs12 sm6 d-flex class="my-1">
                <v-card class="d-flex">
-                <v-layout xs12>
+                <v-layout row wrap>
                   <v-flex md7 xs12 class="intro-box-small">
                     <h1>Supplier Verification</h1>
                     <p>We do all the supplier verification so you don't have to worry about things going wrong.</p>
@@ -121,11 +121,11 @@
               </v-card>
             </v-flex>
           </v-layout>
-          <v-layout xs12>
-             <v-flex md6 xs12 align-self-start class="ma-2">
+          <v-layout row wrap>
+             <v-flex md6 xs12 sm6 d-flex class="my-1">
                <v-card class="d-flex">
-                <v-layout xs12>
-                  <v-flex md7 class="intro-box-small">
+                <v-layout row wrap>
+                  <v-flex md7 xs12 class="intro-box-small">
                     <h1>Best deals</h1>
                     <p>We offer you the best deals through our business model, giving you the best deals available on the market.</p>
                   </v-flex>
@@ -135,9 +135,9 @@
                 </v-layout>
               </v-card>
              </v-flex>
-             <v-flex md6 xs12 align-self-start class="ma-2">
+             <v-flex md6 xs12 d-flex class="my-1">
                <v-card class="d-flex">
-                <v-layout xs12>
+                <v-layout row wrap>
                   <v-flex md7 xs12 class="intro-box-small">
                     <h1>One account</h1>
                     <p>Make one account to access credit with all the suppliers.</p>
@@ -149,23 +149,23 @@
               </v-card>
             </v-flex>
           </v-layout>
-          <v-layout xs12 row wrap>
-            <v-flex md6 xs12 align-self-start class="ma-2">
+          <v-layout row wrap>
+            <v-flex md6 xs12 d-flex class="my-1">
                <v-card class="d-flex">
-                <v-layout xs12>
+                <v-layout row wrap>
                   <v-flex md7 xs12 class="intro-box-small">
                     <h1>Scoring system</h1>
                     <p>We implement a scoring system that determines how much credit you will have access to and the potential for a bigger discount with your order.</p>
                   </v-flex>
-                  <v-flex md5>
+                  <v-flex md5 hidden-xs-only>
                     <v-img src="/images/scoringSys.jpg" alt="Scoring System" ></v-img>
                   </v-flex>
                 </v-layout>
               </v-card>
             </v-flex>
           </v-layout>
-          <v-layout xs12>
-            <v-flex row class="bottom-box" md7 xs12>
+          <v-layout row wrap>
+            <v-flex class="bottom-box" md7 xs12>
                 <h1>Be a part of the <span>future</span> </h1>
                 <p>Sign up today to access the biggest range of eletrical wholesalers and products within Australia.</p>
                 <v-btn class="signup-btn mt-4">Sign up</v-btn>
@@ -328,6 +328,9 @@ export default {
   }
   .intro-box-small {
     padding: 10px 15px;
+    h1 {
+      font-size: 1.6rem;
+    }
   }
   .bottom-box {
     background: var(--v-primary-base);
