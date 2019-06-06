@@ -1,6 +1,6 @@
 import axios from 'axios'
-import store from '~/store'
-import router from '~/router'
+import store from '../store'
+import router from '../router'
 import i18n from './vue-i18n'
 
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';

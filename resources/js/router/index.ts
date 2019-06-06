@@ -67,9 +67,8 @@ function setLayout (router: any, to: any) {
       if (component.loading !== false) {
         router.app.$loading.start()
       }
-
       // Set application layout.
-      router.app.setLayout(component.layout || '')
+      router.app.setLayout(component.layout || 'default')
     })
   }
 }

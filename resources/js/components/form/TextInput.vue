@@ -17,34 +17,6 @@
 <script lang="ts">
     import { Component, Vue, Prop } from 'vue-property-decorator';
 
-    // @Component({
-    //     props: {
-    //         name: {
-    //             type: String,
-    //             required: true,
-    //         },
-    //         label: {
-    //             type: String,
-    //             required: true,
-    //         },
-    //         hint: {
-    //             type: String,
-    //         },
-    //         prepend: {
-    //             type: String,
-    //             default: '',
-    //         },
-    //         counter: {
-    //             type: [Boolean, Number, String],
-    //             default: false,
-    //         },
-    //         value: {
-    //             type: String,
-    //             default: '',
-    //         },
-    //         browserAutocomplete: String,
-    //     },
-    // })
     @Component
     export default class TextInput extends Vue {
         @Prop(Object) vErrors!: any;
@@ -69,6 +41,10 @@
             value = value || ''
             this.$emit('update:value', value.trim())
             this.$emit('input', value.trim())
+        }
+
+        counter() {
+            
         }
     }
 </script>

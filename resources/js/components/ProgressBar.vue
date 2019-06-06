@@ -1,26 +1,20 @@
 <template>
-  <v-progress-linear 
-    :indeterminate="true" 
+  <v-progress-linear
+    :indeterminate="true"
     :color="color"
-    height="4" 
+    height="4"
     v-if="show"
   >
   </v-progress-linear>
 </template>
 
-<script>
-export default {
-  name: 'progress-bar',
-  props: {
-    show: {
-      type: [Boolean, String],
-      required: true
-    },
-    color: {
-      type: String,
-      default: 'accent'
-    }
-  }
+<script lang="ts">
+import { Component, Vue, Prop } from 'vue-property-decorator'
+
+@Component
+export default class ProgressBar extends Vue {
+    @Prop([Boolean, String])show!: boolean | string
+    @Prop({default: 'accent'})color!: string
 }
 </script>
 

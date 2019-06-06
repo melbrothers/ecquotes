@@ -57,7 +57,6 @@
 </template>
 
 <script>
-import { validateMixin } from '~/plugins/validation';
 
 export default {
   name: 'login-view',
@@ -74,7 +73,6 @@ export default {
     busy: false,
   }),
 
-  mixins: [validateMixin],
   methods: {
     async login () {
       if (await this.formHasErrors()) return

@@ -1,5 +1,5 @@
 export default ({ authGuard, guestGuard }: any)  => [
-  { path: '/', name: 'welcome', component: require('~/pages/welcome.vue').default },
+  { path: '/', name: 'welcome', component: require('../pages/Welcome.vue').default },
 
   // Authenticated routes.
   ...authGuard([
@@ -19,11 +19,11 @@ export default ({ authGuard, guestGuard }: any)  => [
 
   // Guest routes.
   ...guestGuard([
-    { path: '/login', name: 'login', component: require('~/pages/auth/login.vue').default },
-    { path: '/register', name: 'register', component: require('~/pages/auth/register.vue').default },
-    { path: '/password/reset', name: 'password.request', component: require('~/pages/auth/password/email.vue').default },
-    { path: '/password/reset/:token', name: 'password.reset', component: require('~/pages/auth/password/reset.vue').default }
+    { path: '/login', name: 'login', component: require('../pages/auth/login.vue').default },
+    { path: '/register', name: 'register', component: require('../pages/auth/register.vue').default },
+    { path: '/password/reset', name: 'password.request', component: require('../pages/auth/password/email.vue').default },
+    { path: '/password/reset/:token', name: 'password.reset', component: require('../pages/auth/password/reset.vue').default }
   ]),
 
-  { path: '*', name: '404', component: require('~/pages/errors/404.vue').default }
+  { path: '*', name: '404', component: require('../pages/errors/404.vue').default }
 ]

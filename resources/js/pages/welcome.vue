@@ -1,6 +1,6 @@
 <template>
   <div>
-    <tool-bar v-on:toggleDrawer="drawer = !drawer" :drawer="drawer"></tool-bar>
+    <ToolBar v-on:toggleDrawer="drawer = !drawer" :drawer="drawer"></ToolBar>
     <main>
       <v-content>
         <v-container fluid class="pa-0">
@@ -19,7 +19,7 @@
                 <h1 >Trusted within the industry.</h1>
                 <h2>Save time and money by ordering and requesting quotes from the biggest range of electrical wholesalers and products within Australia.</h2>
               </div>
-             
+
             </v-flex>
             <v-flex md4 align-self-center hidden-xs-only>
                <div class="intro-img">
@@ -92,7 +92,7 @@
             </v-flex>
           </v-layout>
 
-          <h1 class="ma-2 display-3">We differ from other services</h1>  
+          <h1 class="ma-2 display-3">We differ from other services</h1>
           <v-layout row wrap>
             <v-flex md6 xs12 sm6 d-flex class="my-1">
               <v-card class="d-flex">
@@ -180,29 +180,20 @@
   </div>
 </template>
 
-<script>
-import { mapGetters } from 'vuex'
-import ToolBar from '~/components/ToolBar'
+<script lang="ts">
+import ToolBar from '../components/ToolBar.vue'
+import { Component, Vue, Prop } from 'vue-property-decorator'
 
-export default {
-  name: 'welcome-view',
-  layout: 'default',
-  components: {
-    'tool-bar': ToolBar,
-  },
-
-  metaInfo () {
-    return { title: this.$t('home') }
-  },
-
-  computed: mapGetters({
-    authenticated: 'authCheck'
-  }),
-
-  data: () => ({
-    title: window.config.appName,
-    drawer: false
-  })
+@Component({
+    components: {
+        ToolBar
+    }
+})
+export default class Welcome extends Vue {
+    drawer = false
+    metaInfo () {
+        return { title: this.$t('home') }
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -308,7 +299,7 @@ export default {
     align-items: center;
     justify-content: center;
     text-align: center;
-   
+
     h1 {
       font-size: 3vw;
       width: 90vw;
@@ -346,5 +337,5 @@ export default {
       font-size: 1.5rem;
     }
   }
-  
+
 </style>

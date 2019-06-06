@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import i18n from '~/plugins/vue-i18n'
+import i18n from '../plugins/vue-i18n'
 import TextInput from './TextInput'
 
 export default {

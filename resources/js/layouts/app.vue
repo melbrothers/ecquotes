@@ -1,11 +1,11 @@
 <template>
   <v-app light>
-    <v-navigation-drawer 
-      v-if="authenticated" 
-      persistent 
-      v-model="drawer" 
+    <v-navigation-drawer
+      v-if="authenticated"
+      persistent
+      v-model="drawer"
       :mini-variant.sync="mini"
-      enable-resize-watcher 
+      enable-resize-watcher
       app
     >
       <nav-menu></nav-menu>
@@ -26,10 +26,10 @@
 <script>
 import { mapGetters } from 'vuex'
 
-import NavMenu from '~/components/NavMenu'
-import ToolBar from '~/components/ToolBar'
-import FeedbackMessage from '~/components/FeedbackMessage'
-import PageFooter from '~/components/PageFooter'
+import NavMenu from '../components/NavMenu'
+import ToolBar from '../components/ToolBar'
+import FeedbackMessage from '../components/FeedbackMessage'
+import PageFooter from '../components/PageFooter'
 
 export default {
   components: {

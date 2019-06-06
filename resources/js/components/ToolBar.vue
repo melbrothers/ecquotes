@@ -32,25 +32,25 @@
       <v-btn flat :to="{ name: 'login' }">{{ $t('login') }}</v-btn>
     </template>
   </v-toolbar>
-  
+
 </template>
 
-<script>
-import { mapGetters } from 'vuex'
-import i18n from '~/plugins/vue-i18n'
+<script lang="ts">
+import i18n from '../plugins/vue-i18n'
+import { Component, Vue, Prop } from 'vue-property-decorator'
+import { Getter } from 'vuex-class'
 
-export default {
-  props: {
-    drawer: {
-      type: Boolean,
-      required: true
-    }
-  },
+@Component
+export default class ToolBar extends Vue {
+    @Prop(Boolean)
+    private drawer!: boolean
 
-  data: () => ({
-    appName: window.config.appName,
-    busy: false,
-    account_items: [
+    @Getter('authCheck')
+    private authenticated!: boolean
+
+    appName = 'Ecquotes'
+    busy = false
+    account_items = [
       {
         icon: 'account_circle',
         href: '#',
@@ -63,43 +63,46 @@ export default {
         title: i18n.t('logout'),
         action: 'logout'
       }
-    ],
-  }),
+    ]
 
-  computed: mapGetters({
-    user: 'authUser',
-    authenticated: 'authCheck'
-  }),
+    created() {
+        console.log(this.authenticated)
+    }
+//   computed: mapGetters({
+//     user: 'authUser',
+//     authenticated: 'authCheck'
+//   }),
 
-  methods: {
-    toggleDrawer () {
-      this.$emit('toggleDrawer')
-    },
-    async logout () {
-      this.busy = true
+//     toggleDrawer () {
+//       this.$emit('toggleDrawer')
+//     }
+//   methods: {
 
-      if (this.drawer) {
-        this.toggleDrawer()
-      }
+//     async logout () {
+//       this.busy = true
 
-      // Log out the user.
-      await this.$store.dispatch('logout')
-      this.busy = false
+//       if (this.drawer) {
+//         this.toggleDrawer()
+//       }
 
-      // Redirect to login.
-      this.$router.push({ name: 'login' })
-    },
-    accountMenuItemClicked(action) {
-      switch (action) {
-        case 'profile':
-          this.$router.push({ name: 'settings.profile' })
-          break;
-        case 'logout':
-          this.logout();
-          break;
-      }
-    },
-  }
+//       // Log out the user.
+//       await this.$store.dispatch('logout')
+//       this.busy = false
+
+//       // Redirect to login.
+//       this.$router.push({ name: 'login' })
+//     },
+//     accountMenuItemClicked(action) {
+//       switch (action) {
+//         case 'profile':
+//           this.$router.push({ name: 'settings.profile' })
+//           break;
+//         case 'logout':
+//           this.logout();
+//           break;
+//       }
+//     },
+//   }
 }
 </script>
 

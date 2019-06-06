@@ -39,13 +39,3 @@ if (mix.inProduction()) {
      devtool: 'inline-source-map'
    })
  }
-
-mix.webpackConfig({
-   plugins: [
-   ],
-   resolve: {
-      alias: {
-         '~': path.join(__dirname, './resources/js')
-      }
-   }
-})

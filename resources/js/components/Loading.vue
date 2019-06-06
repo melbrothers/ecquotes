@@ -7,24 +7,24 @@
   }" class="progress"/>
 </template>
 
-<script>
+<script lang="ts">
 // Based on https://github.com/nuxt/nuxt.js/blob/master/lib/app/components/nuxt-loading.vue
-import Vue from 'vue'
+import { Component, Vue } from 'vue-property-decorator'
 
-export default {
-  name: 'v-loading',
-  data: () => ({
-    percent: 0,
-    show: false,
-    canSuccess: true,
-    duration: 3000,
-    height: '2px',
-    color: '#77b6ff',
-    failedColor: 'red'
-  }),
+@Component
+export default class Loading extends Vue {
+    percent = 0
+    show = false
+    canSuccess = true
+    duration = 3000
+    height = '2px'
+    color = '#77b6ff'
+    failedColor = 'red'
 
-  methods: {
-    start () {
+    private _timer: any
+    private _cut: any
+
+   start () {
       this.show = true
       this.canSuccess = true
       if (this._timer) {
@@ -39,33 +39,40 @@ export default {
         }
       }, 100)
       return this
-    },
-    set (num) {
+    }
+
+    set (num: any) {
       this.show = true
       this.canSuccess = true
       this.percent = Math.floor(num)
       return this
-    },
+    }
+
     get () {
       return Math.floor(this.percent)
-    },
-    increase (num) {
+    }
+
+    increase (num: any) {
       this.percent = this.percent + Math.floor(num)
       return this
-    },
-    decrease (num) {
+    }
+
+    decrease (num: any) {
       this.percent = this.percent - Math.floor(num)
       return this
-    },
+    }
+
     finish () {
       this.percent = 100
       this.hide()
       return this
-    },
+    }
+
     pause () {
       clearInterval(this._timer)
       return this
-    },
+    }
+
     hide () {
       clearInterval(this._timer)
       this._timer = null
@@ -78,12 +85,12 @@ export default {
         })
       }, 500)
       return this
-    },
+    }
+
     fail () {
       this.canSuccess = false
       return this
     }
-  }
 }
 </script>
 

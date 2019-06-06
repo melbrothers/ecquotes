@@ -4,12 +4,11 @@
   </v-footer>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      fixed: false
-    }
-  }
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+
+@Component
+export default class PageFooter extends Vue {
+    fixed = false
 }
 </script>
