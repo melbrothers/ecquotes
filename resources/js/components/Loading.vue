@@ -21,8 +21,8 @@ export default class Loading extends Vue {
     color = '#77b6ff'
     failedColor = 'red'
 
-    private _timer: any
-    private _cut: any
+    private _timer!: any
+    private _cut!: number
 
    start () {
       this.show = true
