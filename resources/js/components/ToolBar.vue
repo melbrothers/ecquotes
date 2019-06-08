@@ -48,7 +48,7 @@ export default class ToolBar extends Vue {
     @Getter('authCheck')
     private authenticated!: boolean
 
-    appName = 'Ecquotes'
+    appName = 'Centrade'
     busy = false
     account_items = [
       {
