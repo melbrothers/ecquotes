@@ -16,7 +16,7 @@
           <v-layout row wrap class="intro-box">
             <v-flex md8 align-self-center>
               <div class="px-5 py-3">
-                <h1 class="display-3 font-weight-bold indigo--text text-darken-4">Trusted within the industry.</h1>
+                <h1 class="display-2 font-weight-bold indigo--text text-darken-4">Trusted within the industry.</h1>
                 <h2 class="title indigo--text text-darken-4">Save time and money by ordering and requesting quotes from the biggest range of electrical wholesalers and products within Australia.</h2>
               </div>
 
@@ -38,7 +38,7 @@
           <v-layout class="intro-box blue lighten-1 ma-4">
             <v-flex md8 align-self-center>
               <div class="pa-4">
-                <h1 class="white--text display-3 font-weight-bold">Compare Electrical Products: </h1>
+                <h1 class="white--text display-2 font-weight-bold">Compare Electrical Products: </h1>
                 <p class="white--text subheading">Easily find and compare items and prices from the biggest range of electrical products in on location.</p>
               </div>
             </v-flex>
@@ -49,7 +49,7 @@
           <v-layout row class="intro-box cyan lighten-2 ma-4">
             <v-flex md8 align-self-center>
               <div class="pa-4">
-                <h1 class="white--text display-3 font-weight-bold">Request Quote: </h1>
+                <h1 class="white--text display-2 font-weight-bold">Request Quote: </h1>
                 <p class="white--text subheading">Quotes can be sent out to every wholesaler in one click, saving you time from sending the same order out to each individual suppliers.</p>
               </div>
             </v-flex>
@@ -61,7 +61,7 @@
           <v-layout row justify-center class="intro-box green darken-3 ma-4">
             <v-flex md8 align-self-center>
               <div class="pa-4">
-                <h1 class="white--text display-3 font-weight-bold">Bidding: </h1>
+                <h1 class="white--text display-2 font-weight-bold">Bidding: </h1>
                 <p class="white--text subheading">Wholesalers have the option to bid for the lowest price for an order you have requested.</p>
               </div>
             </v-flex>
@@ -72,7 +72,7 @@
           <v-layout row justify-center class="intro-box orange darken-4 ma-4">
             <v-flex md8 align-self-center>
               <div class="pa-4">
-                <h1 class="white--text display-3 font-weight-bold">Order management: </h1>
+                <h1 class="white--text display-2 font-weight-bold">Order management: </h1>
                 <p class="white--text subheading">Manage all incoming orders, transactions and jobs in one simple platform, giving you the ability to keep track of orders and prices, and easily chase up on any issues you have with your orders.</p>
               </div>
             </v-flex>
@@ -83,7 +83,7 @@
           <v-layout row justify-center class="intro-box green lighten-2 ma-4">
             <v-flex md8 align-self-center>
               <div class="pa-4">
-                <h1 class="white--text display-3 font-weight-bold">Employee Integration: </h1>
+                <h1 class="white--text display-2 font-weight-bold">Employee Integration: </h1>
                 <p class="white--text subheading font-weight-medium">Integrate your employees with this system and manage all of their orders and jobs in one place.</p>
               </div>
             </v-flex>
