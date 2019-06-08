@@ -30,8 +30,8 @@
           </v-layout>
           <v-layout row text-xs-center class="intro-box grey lighten-3 ma-4">
             <v-flex xs12 align-self-center>
-              <div class="recommendation pa-4">
-                <h1>It's an amazing tool I use on a day to day basis. Simplicity and the amount of time saved it crucial for my business." <br>- John Snow</h1>
+              <div class="recommendation text-center pa-4">
+                <h1 class="display-1 font-weight-bold grey--text text-darken-4">It's an amazing tool I use on a day to day basis. Simplicity and the amount of time saved it crucial for my business." <br>- John Snow</h1>
               </div>
             </v-flex>
           </v-layout>
@@ -246,13 +246,6 @@ export default class Welcome extends Vue {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-
-    h1 {
-      font-size: 3vw;
-      width: 90vw;
-      color: rgb(91, 91, 91);
-    }
   }
 
   .responsive-img {
