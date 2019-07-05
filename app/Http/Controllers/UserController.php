@@ -8,7 +8,7 @@ class UserController extends Controller
 {
     /**
      * @OA\Get(
-     *   path="/api/user",
+     *   path="/api/auth/user",
      *   tags={"user"},
      *   security={
      *     {"passport": {}},
@@ -20,9 +20,9 @@ class UserController extends Controller
      *   )
      * )
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('app');
+        return response()->json(['data' => $request->user()]);
     }
 
 
