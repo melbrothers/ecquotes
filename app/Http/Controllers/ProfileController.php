@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\User;
@@ -15,26 +16,26 @@ class ProfileController extends Controller
 
     public function store(ProfileRequest $request)
     {
-       $validated = $request->validated();
+        $validated = $request->validated();
 
-       $user = $request->user();
+        $user = $request->user();
 
-       $user->first_name = $validated['firstName'];
-       $user->last_name = $validated['lastName'];
-       $user->title = $validated['title'];
-       $user->gender = $validated['gender'];
-       $user->dob = $validated['dob'];
-       $user->mobile = $validated['mobile'];
-       $user->landline = $validated['landline'];
-       $user->abn = $validated['abn'];
-       $user->licence = $validated['licence'];
-       $user->address1 = $validated['address1'];
-       $user->address2 = $validated['address2'] ?? null;
-       $user->suburb = $validated['suburb'];
-       $user->state = $validated['state'];
-       $user->postcode = $validated['postcode'];
-       $user->save();
+        $user->first_name = $validated['firstName'];
+        $user->last_name = $validated['lastName'];
+        $user->title = $validated['title'];
+        $user->gender = $validated['gender'];
+        $user->dob = $validated['dob'];
+        $user->mobile = $validated['mobile'];
+        $user->landline = $validated['landline'];
+        $user->abn = $validated['abn'];
+        $user->licence = $validated['licence'];
+        $user->address1 = $validated['address1'];
+        $user->address2 = $validated['address2'] ?? null;
+        $user->suburb = $validated['suburb'];
+        $user->state = $validated['state'];
+        $user->postcode = $validated['postcode'];
+        $user->save();
 
-       return new UserResource($request->user());
+        return new UserResource($request->user());
     }
 }
