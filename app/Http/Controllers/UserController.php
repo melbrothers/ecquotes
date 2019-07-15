@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use App\Http\Resources\User as UserResource;
 
 class UserController extends Controller
 {
@@ -22,7 +23,7 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json(['data' => $request->user()]);
+        return new UserResource($request->user());
     }
 
 }

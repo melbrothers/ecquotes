@@ -34,7 +34,10 @@ class ProfileRequest extends FormRequest
             'abn' => 'required',
             'licence' => 'required',
             'address1' => 'required',
-            'address2' => 'string',
+            'address2' => 'nullable',
+            'suburb' => 'required',
+            'state' => 'required',
+            'postcode' => 'required'
         ];
     }
 }

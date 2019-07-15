@@ -20,6 +20,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::get('auth/user', 'UserController@index');
 
     Route::post('user/profile', 'ProfileController@store');
+    Route::get('user/profile', 'ProfileController@index');
 });
 
 
