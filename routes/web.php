@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('{path}', 'SpaController@index')->where('path', '(.*)');
-
 Route::get('password/reset/{token}', 'SpaController@index')->name('password.reset');
