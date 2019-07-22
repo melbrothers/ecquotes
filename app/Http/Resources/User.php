@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\LegalEntity as LegalEntityResource;
 
 class User extends JsonResource
 {
@@ -25,13 +26,7 @@ class User extends JsonResource
                 'dob' => $this->dob,
                 'mobile' => $this->mobile,
                 'landline' => $this->landline,
-                'abn' => $this->abn,
-                'licence' => $this->licence,
-                'address1' => $this->address1,
-                'address2' => $this->address2,
-                'suburb' => $this->suburb,
-                'state' => $this->state,
-                'postcode' => $this->postcode,
+                'legal_entity' => new LegalEntityResource($this->legalEntity)
             ]
         ];
     }

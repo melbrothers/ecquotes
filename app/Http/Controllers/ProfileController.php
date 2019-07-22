@@ -27,13 +27,14 @@ class ProfileController extends Controller
         $user->dob = $validated['dob'];
         $user->mobile = $validated['mobile'];
         $user->landline = $validated['landline'];
-        $user->abn = $validated['abn'];
-        $user->licence = $validated['licence'];
-        $user->address1 = $validated['address1'];
-        $user->address2 = $validated['address2'] ?? null;
-        $user->suburb = $validated['suburb'];
-        $user->state = $validated['state'];
-        $user->postcode = $validated['postcode'];
+        $legalEntity = $user->legalEntity;
+        $legalEntity->licence = $validated['legal_entity']['licence'];
+        $legalEntity->address1 = $validated['legal_entity']['address1'];
+        $legalEntity->address2 = $validated['legal_entity']['address2'] ?? null;
+        $legalEntity->suburb = $validated['legal_entity']['suburb'];
+        $legalEntity->state = $validated['legal_entity']['state'];
+        $legalEntity->postcode = $validated['legal_entity']['postcode'];
+        $legalEntity->save();
         $user->save();
 
         return new UserResource($request->user());

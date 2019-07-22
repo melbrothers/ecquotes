@@ -16,12 +16,13 @@ class CreateLegalEntitiesTable extends Migration
         Schema::create('legal_entities', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('abn');
-            $table->boolean('abn_active')->default(0);
-            $table->string('business_account_name');
-            $table->string('trading_name')->nullable();
-            $table->string('electrical_licence_number')->nullable();
-            $table->string('nature_of_business')->nullable();
-            $table->integer('employees');
+            $table->string('licence')->nullable();
+            $table->string('business_name');
+            $table->string('address1')->nullable();
+            $table->string('address2')->nullable();
+            $table->string('suburb')->nullable();
+            $table->string('state')->nullable();
+            $table->string('postcode')->nullable();
             $table->timestamps();
         });
     }

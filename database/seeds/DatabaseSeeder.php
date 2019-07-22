@@ -47,11 +47,20 @@ class DatabaseSeeder extends Seeder
             ]
         ]);
 
+        DB::table('legal_entities')->insert([
+            [
+                'id' => 1,
+                'abn' => '123456789',
+                'business_name' => 'Centrade',
+            ]
+        ]);
+
         DB::table('users')->insert([
             [
                 'id' => 1,
                 'email' => 'zlxjackie@hotmail.com',
                 'password' => '$2y$10$XyOmyU8Fa5jJU2CA3fzyheHNAb7OOF5z5UVzzvI.ciCXBLWh7j.JS',
+                'legal_entity_id' => 1
             ]
         ]);
     }

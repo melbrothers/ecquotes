@@ -31,13 +31,12 @@ class ProfileRequest extends FormRequest
             'dob' => 'required',
             'mobile' => 'required',
             'landline' => 'required',
-            'abn' => 'required',
-            'licence' => 'required',
-            'address1' => 'required',
-            'address2' => 'nullable',
-            'suburb' => 'required',
-            'state' => 'required',
-            'postcode' => 'required'
+            'legal_entity.licence' => 'required',
+            'legal_entity.address1' => 'required',
+            'legal_entity.address2' => 'nullable',
+            'legal_entity.suburb' => 'required',
+            'legal_entity.state' => 'required',
+            'legal_entity.postcode' => 'required'
         ];
     }
 }
