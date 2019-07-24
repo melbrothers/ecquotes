@@ -41,6 +41,11 @@ class ResourceCreationTest extends IntegrationTest
         $this->assertCount(1, ActionEvent::all());
         $this->assertEquals('Create', $actionEvent->name);
         $this->assertEquals($user->id, $actionEvent->target->id);
+        $this->assertEmpty($actionEvent->original);
+        $this->assertSubset([
+            'name' => 'Taylor Otwell',
+            'email' => 'taylor@laravel.com',
+        ], $actionEvent->changes);
         $this->assertTrue($user->is($actionEvent->target));
     }
 
@@ -388,5 +393,99 @@ class ResourceCreationTest extends IntegrationTest
             ],
             $user->meta
         );
+    }
+
+    public function test_fields_are_not_validated_if_user_cant_see_them()
+    {
+        $_SERVER['weight-field.canSee'] = false;
+        $_SERVER['weight-field.readonly'] = false;
+
+        $this->withExceptionHandling()
+            ->postJson('/nova-api/users', [
+                'name' => 'Taylor Otwell',
+                'email' => 'taylor@laravel.com',
+                'password' => 'secret',
+            ])
+            ->assertStatus(201);
+    }
+
+    public function test_fields_are_not_stored_if_user_cant_see_them()
+    {
+        $_SERVER['weight-field.canSee'] = false;
+        $_SERVER['weight-field.readonly'] = false;
+
+        $this->withExceptionHandling()
+            ->postJson('/nova-api/users', [
+                'name' => 'Taylor Otwell',
+                'email' => 'taylor@laravel.com',
+                'weight' => 190,
+                'password' => 'secret',
+            ])
+            ->assertStatus(201);
+
+        $this->assertNull(User::first()->weight);
+    }
+
+    public function test_readonly_fields_are_not_validated()
+    {
+        $_SERVER['weight-field.canSee'] = true;
+        $_SERVER['weight-field.readonly'] = true;
+
+        $this->withExceptionHandling()
+            ->postJson('/nova-api/users', [
+                'name' => 'Taylor Otwell',
+                'email' => 'taylor@laravel.com',
+                'password' => 'secret',
+            ])
+            ->assertStatus(201);
+    }
+
+    public function test_readonly_fields_are_not_stored()
+    {
+        $_SERVER['weight-field.canSee'] = true;
+        $_SERVER['weight-field.readonly'] = true;
+
+        $this->withExceptionHandling()
+            ->postJson('/nova-api/users', [
+                'name' => 'Taylor Otwell',
+                'email' => 'taylor@laravel.com',
+                'weight' => 190,
+                'password' => 'secret',
+            ])
+            ->assertStatus(201);
+
+        $this->assertNull(User::first()->weight);
+    }
+
+    public function test_resource_can_redirect_to_default_uri_on_create()
+    {
+        $response = $this->withoutExceptionHandling()
+            ->postJson('/nova-api/users', [
+                'name' => 'Taylor Otwell',
+                'email' => 'taylor@laravel.com',
+                'password' => 'secret',
+            ]);
+
+        $response->assertJson(['redirect' => '/resources/users/1']);
+    }
+
+    public function test_resource_can_redirect_to_custom_uri_on_create()
+    {
+        $response = $this->withoutExceptionHandling()
+            ->postJson('/nova-api/users-with-redirects', [
+                'name' => 'Taylor Otwell',
+                'email' => 'taylor@laravel.com',
+                'password' => 'secret',
+            ]);
+
+        $response->assertJson(['redirect' => 'https://yahoo.com']);
+    }
+
+    public function tearDown() : void
+    {
+        unset($_SERVER['weight-field.readonly']);
+        unset($_SERVER['weight-field.canSee']);
+
+        parent::tearDown();
     }
 }

@@ -33,11 +33,12 @@ class ResourceIndexTest extends IntegrationTest
         $response = $this->withExceptionHandling()
                         ->getJson('/nova-api/users');
 
-        $this->assertEquals('UserResources', $response->original['label']);
+        $this->assertEquals('User Resources', $response->original['label']);
         $this->assertEquals($user->id, $response->original['resources'][0]['id']->value);
         $this->assertTrue($response->original['resources'][0]['authorizedToUpdate']);
         $this->assertTrue($response->original['resources'][0]['authorizedToDelete']);
         $this->assertTrue($response->original['resources'][0]['softDeletes']);
+        $this->assertEquals([25, 50, 100], $response->original['per_page_options']);
 
         $fields = $response->original['resources'][0]['fields'];
         $nameField = collect($fields)->where('attribute', 'name')->first();
