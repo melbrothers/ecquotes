@@ -52,6 +52,7 @@ class DatabaseSeeder extends Seeder
                 'id' => 1,
                 'abn' => '123456789',
                 'business_name' => 'Centrade',
+                'entity_type' => 'wholesaler'
             ]
         ]);
 

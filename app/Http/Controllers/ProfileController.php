@@ -27,13 +27,15 @@ class ProfileController extends Controller
         $user->dob = $validated['dob'];
         $user->mobile = $validated['mobile'];
         $user->landline = $validated['landline'];
+        $user->role = 'ROLE_USER';
         $legalEntity = $user->legalEntity;
+        $legalEntity->entity_type = 'electrician';
         $legalEntity->licence = $validated['legal_entity']['licence'];
-        $legalEntity->address1 = $validated['legal_entity']['address1'];
-        $legalEntity->address2 = $validated['legal_entity']['address2'] ?? null;
+        $legalEntity->address1 = $validated['legal_entity']['address_line_1'];
+        $legalEntity->address2 = $validated['legal_entity']['address_line_2'] ?? null;
         $legalEntity->suburb = $validated['legal_entity']['suburb'];
         $legalEntity->state = $validated['legal_entity']['state'];
-        $legalEntity->postcode = $validated['legal_entity']['postcode'];
+        $legalEntity->postcode = $validated['legal_entity']['postal_code'];
         $legalEntity->save();
         $user->save();
 

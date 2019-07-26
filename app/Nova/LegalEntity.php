@@ -5,7 +5,10 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Place;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Fields\HasMany;
+use Laravel\Nova\Panel;
 
 class LegalEntity extends Resource
 {
@@ -49,6 +52,39 @@ class LegalEntity extends Resource
 
             Text::make('ABN')
                 ->sortable()
+                ->rules('required', 'max:255'),
+
+            Text::make('Status')
+                ->sortable()
+                ->rules('required', 'max:255'),
+
+            new Panel('Address Information', $this->addressFields()),
+
+            HasMany::make('Users')
+        ];
+    }
+
+    protected function addressFields()
+    {
+        return [
+            Place::make('Address', 'address_line_1')->countries(['AU'])
+                 ->hideFromIndex()
+                 ->rules('required', 'max:255'),
+
+            Text::make('Address Line 2')
+                ->hideFromIndex()
+                ->rules('max:255'),
+
+            Text::make('Suburb', 'city')
+                ->hideFromIndex()
+                ->rules('required', 'max:255'),
+
+            Text::make('State')
+                ->hideFromIndex()
+                ->rules('required', 'max:255'),
+
+            Text::make('Postal Code')
+                ->hideFromIndex()
                 ->rules('required', 'max:255'),
         ];
     }

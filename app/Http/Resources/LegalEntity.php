@@ -19,11 +19,11 @@ class LegalEntity extends JsonResource
             'abn' => $this->abn,
             'business_name' => $this->business_name,
             'licence' => $this->licence,
-            'address1' => $this->address1,
-            'address2' => $this->address2,
+            'address_line_1' => $this->address_line_1,
+            'address_line_2' => $this->address_line_2,
             'suburb' => $this->suburb,
             'state' => $this->state,
-            'postcode' => $this->postcode,
+            'postal_code' => $this->postal_code,
         ];
     }
 }
