@@ -74,7 +74,8 @@ class RegisterController extends Controller
     {
         $legalEntity = LegalEntity::create([
             'abn' => $data['abn'],
-            'business_name' => $data['businessName']
+            'business_name' => $data['businessName'],
+            'entity_type' => 'electrician'
         ]);
 
         return User::create([
