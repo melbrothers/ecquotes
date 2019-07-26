@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
@@ -54,9 +55,7 @@ class LegalEntity extends Resource
                 ->sortable()
                 ->rules('required', 'max:255'),
 
-            Text::make('Status')
-                ->sortable()
-                ->rules('required', 'max:255'),
+            Boolean::make('Active'),
 
             new Panel('Address Information', $this->addressFields()),
 
@@ -69,13 +68,14 @@ class LegalEntity extends Resource
         return [
             Place::make('Address', 'address_line_1')->countries(['AU'])
                  ->hideFromIndex()
+                 ->city('suburb')
                  ->rules('required', 'max:255'),
 
             Text::make('Address Line 2')
                 ->hideFromIndex()
                 ->rules('max:255'),
 
-            Text::make('Suburb', 'city')
+            Text::make('Suburb')
                 ->hideFromIndex()
                 ->rules('required', 'max:255'),
 

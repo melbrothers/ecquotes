@@ -23,6 +23,7 @@ class CreateLegalEntitiesTable extends Migration
             $table->string('address_line_2')->nullable();
             $table->string('suburb')->nullable();
             $table->string('state')->nullable();
+            $table->boolean('active')->default(1);
             $table->string('postal_code')->nullable();
             $table->timestamps();
         });
