@@ -46,11 +46,7 @@ class User extends Resource
 
             Gravatar::make(),
 
-            Text::make('First Name')
-                ->sortable()
-                ->rules('required', 'max:255'),
-
-            Text::make('Last Name')
+            Text::make('Name')
                 ->sortable()
                 ->rules('required', 'max:255'),
 
@@ -62,8 +58,8 @@ class User extends Resource
 
             Password::make('Password')
                 ->onlyOnForms()
-                ->creationRules('required', 'string', 'min:6')
-                ->updateRules('nullable', 'string', 'min:6'),
+                ->creationRules('required', 'string', 'min:8')
+                ->updateRules('nullable', 'string', 'min:8'),
         ];
     }
 

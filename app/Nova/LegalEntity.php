@@ -5,6 +5,7 @@ namespace App\Nova;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Place;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -55,7 +56,13 @@ class LegalEntity extends Resource
                 ->sortable()
                 ->rules('required', 'max:255'),
 
-            Boolean::make('Active'),
+            Select::make('Entity Type')
+                ->options([
+                    'Vendor',
+                    'Customer'
+                ]),
+
+            Boolean::make('Active')->withMeta(['value' => true])->exceptOnForms(),
 
             new Panel('Address Information', $this->addressFields()),
 
