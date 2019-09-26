@@ -78,6 +78,7 @@
     'providers' => 
     array (
       0 => 'Nuwave\\Lighthouse\\LighthouseServiceProvider',
+      1 => 'Nuwave\\Lighthouse\\SoftDeletes\\SoftDeletesServiceProvider',
     ),
     'aliases' => 
     array (
